@@ -1,0 +1,22 @@
+{
+  "name": "hast-util-insert",
+  "repository": "marekweb/hast-util-insert",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write '**/*.{js,md}'",
+    "test": "jest"
+  },
+  "dependencies": {
+    "hast-util-select": "^4.0.0"
+  },
+  "devDependencies": {
+    "hastscript": "^5.1.2",
+    "jest": "^25.1.0",
+    "prettier": "^2.0.1"
+  },
+  "prettier": {
+    "proseWrap": "always",
+    "arrowParens": "avoid"
+  }
+}
