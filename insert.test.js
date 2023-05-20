@@ -1,5 +1,5 @@
 import { h } from "hastscript";
-import { insert } from "./dist/index.js";
+import { insert } from "./dist/insert.js";
 import { describe, test } from "node:test";
 import assert from "node:assert/strict";
 
