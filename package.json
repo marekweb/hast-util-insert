@@ -1,22 +1,31 @@
 {
   "name": "hast-util-insert",
   "repository": "marekweb/hast-util-insert",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
+  "type": "module",
+  "exports": "./dist/insert.js",
+  "types": "./dist/insert.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "format": "prettier --write '**/*.{js,md}'",
-    "test": "jest"
+    "build": "tsc --declaration",
+    "check": "rome check . && rome format .",
+    "format": "rome format .'",
+    "fix": "rome check . --apply && rome format . --write",
+    "test": "npm run build && npm run check && node --test",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test"
   },
   "dependencies": {
-    "hast-util-select": "^4.0.0"
+    "hast-util-select": "^5.0.5"
   },
   "devDependencies": {
-    "hastscript": "^5.1.2",
-    "jest": "^25.1.0",
-    "prettier": "^2.0.1"
-  },
-  "prettier": {
-    "proseWrap": "always",
-    "arrowParens": "avoid"
+    "@types/hast": "^2.3.4",
+    "hastscript": "^7.2.0",
+    "rome": "^12.1.2",
+    "typescript": "^5.0.4",
+    "unist-util-inspect": "^7.0.2"
   }
 }
