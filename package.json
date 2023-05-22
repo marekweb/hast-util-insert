@@ -12,7 +12,7 @@
   "scripts": {
     "build": "tsc --declaration",
     "check": "rome check . && rome format .",
-    "format": "rome format .'",
+    "format": "rome format .",
     "fix": "rome check . --apply && rome format . --write",
     "test": "npm run build && npm run check && node --test",
     "prepare": "npm run build",
